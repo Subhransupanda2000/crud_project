@@ -25,13 +25,13 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public User fetchUsersById(String Id) {
-        return userRepository.findById(Id).get();
+    public User fetchUsersById(String id) {
+        return userRepository.findById(id).get();
     }
 
     @Override
-    public void removeUserById(String Id) {
-        userRepository.deleteById(Id);
+    public void removeUserById(String id) {
+        userRepository.deleteById(id);
     }
 
     @Override

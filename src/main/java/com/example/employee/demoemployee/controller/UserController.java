@@ -13,31 +13,31 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/SaveUser")
+    @PostMapping("/saveUser")
     public User saveUser(@RequestBody User user) {
         return userService.saveUser(user);
     }
 
-    @GetMapping("/Users")
+    @GetMapping("/users")
     public List<User> fetchUsers() {
         return userService.fetchUsers();
     }
 
-    @GetMapping("/{Id}")
-    public User fetchUserById(@PathVariable("Id") String Id) {
-        return userService.fetchUsersById(Id);
+    @GetMapping("/{id}")
+    public User fetchUserById(@PathVariable("id") String id) {
+        return userService.fetchUsersById(id);
     }
 
-    @DeleteMapping("/{Id}")
-    public String removeUserById(@PathVariable("Id") String Id) {
-        userService.removeUserById(Id);
-        return Id;
+    @DeleteMapping("/{id}")
+    public String removeUserById(@PathVariable("id") String id) {
+        userService.removeUserById(id);
+        return id;
     }
 
-    @PutMapping("/{Id}")
-    public User updateUser(@PathVariable("Id") String Id, @RequestBody User user) {
+    @PutMapping("/{id}")
+    public User updateUser(@PathVariable("id") String id, @RequestBody User user) {
 
-        return userService.updateUser(Id, user);
+        return userService.updateUser(id, user);
     }
 
     @GetMapping("/userByName/{departmentName}")

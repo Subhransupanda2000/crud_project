@@ -10,10 +10,10 @@ public interface UserService {
 
     public   List<User> fetchUsers();
 
-    public   User fetchUsersById(String Id);
+    public   User fetchUsersById(String id);
 
-    public void removeUserById(String Id);
-    public User updateUser(String Id,User user);
+    public void removeUserById(String id);
+    public User updateUser(String id,User user);
 
     public User fetchUsersByName(String departmentName);
 }
